@@ -38,3 +38,5 @@
     }
   ]
 }
+
+npx tsc --watch
