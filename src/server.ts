@@ -27,7 +27,7 @@ let clientes_bd : Cliente[] = [{
 }];
 
 //#GET
-app.get('/clientes', (req:Request, res: Response)=>{
+app.get('/', (req:Request, res: Response)=>{
   return res.status(200).json(
     clientes_bd
   );
