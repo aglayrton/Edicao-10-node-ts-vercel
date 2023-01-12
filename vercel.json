@@ -1,6 +1,7 @@
 {
+  "name":"teste",
   "version": 2,
-  "builds": [
+  "build": [
     {
       "src": "dist/server.js",
       "use": "@vercel/node"
