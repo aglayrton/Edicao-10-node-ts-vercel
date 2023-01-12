@@ -1,0 +1,45 @@
+<script>
+  //FUNCAO PARA GET
+  async function clientes() {
+    //await  - espera
+    //fecht - de onde vou buscar os dados
+    const reponse = await fetch("http://localhost:8080/clientes/objeto");
+    return reponse.json();
+  }
+
+
+
+
+
+
+
+
+  
+  //tiro da funcao o objeto e imprimo
+  clientes().then((data) => {
+    console.log(data);
+  });
+
+  //FUNCAO PARA POST
+  fetch("http://localhost:8080/clientes", {
+    method: "POST",
+    body: JSON.stringify({
+      nome: "Bob",
+      email: "sponja@gmail.com",
+      telefone: "856979757",
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // aqui, data é o objeto JSON
+      console.log(data);
+    });
+
+
+    //PUT
+
+    //DELETE
+</script>
